@@ -1,0 +1,16 @@
+# Q2 Answer template
+
+N = int(input())
+old = N
+new = N
+count = 0
+
+while True:
+    count += 1
+    temp = (new // 10) + (new % 10)
+    new = (old % 10) * 10 + temp % 10
+    old = new
+    if N == new:
+        break
+
+print(count)
